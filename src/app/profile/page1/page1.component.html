@@ -1,0 +1,70 @@
+<div class="wrapper">
+  <div class="form1">
+    <form [formGroup]="form1">
+      First Name* <br />
+      <input type="text" formControlName="firstName" />
+      <br />
+      Last Name*
+      <br />
+      <input type="text" formControlName="lastName" />
+      User Name*
+      <br />
+      <input type="text" formControlName="userName" />
+      Date of Birth*
+      <br />
+      <input type="date" formControlName="dob" />
+      Phone No.*
+      <br />
+      <input type="number" formControlName="phone" />
+      Gender*
+      <br />
+      <select name="Gender" formControlName="gender">
+        <option value="Male" selected>Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <br>
+      Select your Avatar*
+      <div class="grid">
+        <div class="gridRow">
+          <div class="gridCol">
+            <img [ngStyle]="{'background-color': (avatar=='boy-1') ? 'wheat' : 'white'}" (click)="setAvatar('boy-1')" class="img img-responsive" src="../../../assets/boy-1.svg" alt="">
+          </div>
+          <div class="gridCol">
+              <img [ngStyle]="{'background-color': (avatar=='man') ? 'wheat' : 'white'}" (click)="setAvatar('man')" class="img img-responsive" src="../../../assets/man.svg" alt="">
+            </div>
+            <div class="gridCol">
+                <img [ngStyle]="{'background-color': (avatar=='man-4') ? 'wheat' : 'white'}" (click)="setAvatar('man-4')" class="img img-responsive" src="../../../assets/man-4.svg" alt="">
+              </div>
+        </div>
+        <div class="gridRow">
+            <div class="gridCol">
+              <img [ngStyle]="{'background-color': (avatar=='man-3') ? 'wheat' : 'white'}" (click)="setAvatar('man-3')" class="img img-responsive" src="../../../assets/man-3.svg" alt="">
+            </div>
+            <div class="gridCol">
+                <img [ngStyle]="{'background-color': (avatar=='man-2') ? 'wheat' : 'white'}" (click)="setAvatar('man-2')" class="img img-responsive" src="../../../assets/man-2.svg" alt="">
+              </div>
+              <div class="gridCol">
+                  <img [ngStyle]="{'background-color': (avatar=='man-1') ? 'wheat' : 'white'}" (click)="setAvatar('man-1')" class="img img-responsive" src="../../../assets/man-1.svg" alt="">
+                </div>
+          </div>
+          <div class="gridRow">
+              <div class="gridCol">
+                <img [ngStyle]="{'background-color': (avatar=='girl') ? 'wheat' : 'white'}" (click)="setAvatar('girl')" class="img img-responsive" src="../../../assets/girl.svg" alt="">
+              </div>
+              <div class="gridCol">
+                  <img [ngStyle]="{'background-color': (avatar=='girl-1') ? 'wheat' : 'white'}" (click)="setAvatar('girl-1')" class="img img-responsive" src="../../../assets/girl-1.svg" alt="">
+                </div>
+                <div class="gridCol">
+                    <img [ngStyle]="{'background-color': (avatar=='boy') ? 'wheat' : 'white'}" (click)="setAvatar('boy')" class="img img-responsive" src="../../../assets/boy.svg" alt="">
+                  </div>
+            </div>
+      </div>
+    </form>
+  </div>
+  <div class="next">
+    <div class="submit" (click)="submit()">
+      <span [ngStyle]="{'color': (form1.valid)?'black':'gray'}">Next</span>
+    </div>
+  </div>
+</div>

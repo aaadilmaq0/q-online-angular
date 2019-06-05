@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <div class="form2">
+      <form [formGroup]="form2">
+        Country* <br />
+        <input type="text" formControlName="country" />
+        <br />
+        State*
+        <br />
+        <input type="text" formControlName="state" />
+        City*
+        <br />
+        <input type="text" formControlName="state" />
+        <br>
+        Zip-code*
+        <br>
+        <input type="number" formControlName="ip">
+        <br />
+        Geo-code-latitude*
+        <input type="number" formControlName="latitude">
+        <br />
+        Geo-code-longitude*
+        <input type="number" formControlName="longitude">
+        <br />
+      </form>
+    </div>
+    <div class="next">
+      <div class="submit" (click)="submit()">
+        <span [ngStyle]="{'color': (form2.valid)?'black':'gray'}">Next</span>
+      </div>
+    </div>
+  </div>
+  

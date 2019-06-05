@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="welcome" *ngIf="!loaded">
+    <img
+      class="img img-responsive welcomeimg"
+      src="../../assets/polygonal-letter-z-of-small-triangles.svg"
+    />
+    <p class="zoom">ZOOM</p>
+    <p class="loading">{{ loading }}</p>
+  </div>
+
+  <div class="login" *ngIf="loaded">
+    <img
+      class="img img-responsive welcomeimg"
+      src="../../assets/polygonal-letter-z-of-small-triangles.svg"
+    />
+    <p class="zoom">ZOOM</p>
+
+    <div class="buttons">
+      <button class="facebook btn" (click)="login('facebook')">
+        <img src="../../assets/fb.png" height="20px" width="20px">
+        Login with Facebook
+      </button>
+      <p><strong>OR</strong></p>
+      <button class="google btn" (click)="login('google')">
+          <img src="../../assets/google-plus.png" height="25px" width="25px">
+          &nbsp; &nbsp;Login with Google &nbsp; 
+        </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+To run this application follow these steps-
+
+1) Install node
+2) Open terminal/cmd
+3) update node 
+
+sudo npm i npm -g
+
+4) install angular cli
+
+sudo npm i @angular/cli --save
+
+5) go to the project directory in terminal
+
+6) run sudo npm i
+
+7) run ng serve --port=4200
+
+8) go to http://localhost:4200 on your browser
